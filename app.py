@@ -2,9 +2,22 @@
 
 import streamlit as st
 import pandas as pd
-import datatime
+#import datatime 
 import plotly.express as px
 import plotly.graph_objects as go
 
-# read the data from cvs file
-data_file = pd.read_csv("/E-COMMERCE DATA/business.retailsales.csv")
+st.set_page_config(page_title = 'E-COMMERCE Sales Data')
+st.header('Retail Results 2020')
+st.subheader('Which product sold the most?')
+
+
+# Replace this with the path to your CSV file
+csv_file = 'business.retailsales.csv'
+
+# Read the CSV file using pandas
+df = pd.read_csv(csv_file)
+
+# Display the dataframe in the Streamlit app
+st.write(df)
+
+line_graph = px.data.stocks
